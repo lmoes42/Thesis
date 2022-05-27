@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1653645521 "main.aux" "main.bbl" "main" 1653649911
+["bibtex main"] 1653645521 "main.aux" "main.bbl" "main" 1653651028
   "/usr/local/texlive/2021/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
   "main.aux" 1653649583 10519 91094538e4e8559acefbee017c307804 "pdflatex"
   "references.bib" 1652465245 1638 ba12460b9c38a94bd755b285c7e9522a ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1653649579 "main.tex" "main.pdf" "main" 1653649911
+["pdflatex"] 1653649579 "main.tex" "main.pdf" "main" 1653651028
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -230,8 +230,8 @@
   "pointsOfFiniteOrder/pointsOfFiniteOrder.tex" 1653473104 12772 1c060acf88a0405c8e84083759d24742 ""
   "quotientGroup/quotientGroup.tex" 1653649638 4802 d574aa494d2d5a9a2a0368d04edfc825 ""
   (generated)
-  "main.log"
-  "main.out"
-  "main.pdf"
   "main.toc"
+  "main.pdf"
+  "main.log"
   "main.aux"
+  "main.out"
