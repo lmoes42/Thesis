@@ -1,0 +1,85 @@
+\begin{theorem}
+  For any Elliptic Curve $E: y^2 = f(x)$ the group $E(\mathbb{Q})$ is finitely
+  generated.
+\end{theorem}
+Which requires results from cohomology which are beyond the
+scope of this thesis \cite[Section VIII]{silvermanArithmetic} .
+We shall prove the weaker version
+\begin{theorem} \label{thm:mordell}
+  Let $E: y^2 = f(x)$ be an Elliptic Curve. If
+  $E(\mathbb{Q})$ contains a point of order 3, then
+  $E(\mathbb{Q})$ is finitely generated.
+\end{theorem}
+
+\subsection{Explicit Computation of Mordell-Weil Groups}%
+\label{sub:explicit_computation_of_mordell_weil_groups}
+If we suppose \ref{thm:mordell} holds, then we can use the
+structure theorem for finitely generated groups \cite[Theorem 8.1]{sergeLangAlgebra}
+the conclude that an elliptic curve $E$ over $\mathbb{Q}$ has
+\begin{align*}
+  E(\mathbb{Q}) \simeq \mathbb{Z}^{r} \times (\mathbb{Z}/d_1\mathbb{Z}) \times \cdots \times (\mathbb{Z}/d_n\mathbb{Z})
+\end{align*}
+for some integers $r, d_i$. We can moreover conclude this is the same as
+\begin{align*}
+  E(\mathbb{Q}) \simeq \mathbb{Z}^{r} \times E(\mathbb{Q})_{\tors}.
+\end{align*}
+We have gone into some examples of computing subgroups of $E(\mathbb{Q})_{\tors}$
+in section \ref{sec:points_of_finite_order}, now we shall give
+an example of how to
+compute $r$ for a given curve.
+\begin{example} \label{ex:explicitComputation}
+  Let $E: y^2 = x^3 + (x - 1)^2$ be an elliptic curve over $\mathbb{Q}$.
+  Recall from example \ref{ex:multiplicationIsogeny} that
+  we can find maps $\Phi, \Psi$ such that for some elliptic curve
+  $\bar{E}$ the diagram
+  \begin{equation*}
+  \begin{tikzcd}
+    E(\mathbb{Q}) \ar[rr, bend left, "\begin{bmatrix}3\end{bmatrix}"] \ar[r, "\Phi"] & \bar{E}(\mathbb{Q}) \ar[r, "\Psi"] & E(\mathbb{Q})
+  \end{tikzcd}
+  \end{equation*}
+  commutes.
+  As in \cite[Section 3.1]{moniqueThesis} we can moreover define a map $\alpha: E(\mathbb{Q}) \to \mathbb{Q}^\times / \mathbb{Q}^{\times 3}$
+  by mapping $P = (x, y)$ as
+  \begin{align*}
+    \alpha(P) =
+    \begin{dcases}
+      \mathbb{Q}^{\times 3} \:&\text{if}\, P = \mathbb{Q}, \\
+      (y + (x - 1)) \mathbb{Q}^{\times 3}\:&\text{else}.
+    \end{dcases}
+  \end{align*}
+  later on we will verify that this is
+  a homomorphism and $\ker \alpha = \Psi \bar{E}(\mathbb{Q})$, for now we refer to \cite[Theorem 5]{moniqueThesis}.
+
+  Knowing this, we find via the first isomorphism theorem
+  \begin{align*}
+    E(\mathbb{Q}) / \Psi \bar{E}(\mathbb{Q}) \simeq \alpha(E(\mathbb{Q}))
+  \end{align*}
+  and that $(x,y) \mapsto (x + y - 1) \mod \mathbb{Q}^{\times 3}$.
+
+  Now we take an arbitrary rational point $p/q$ on $E$,
+  then we should have
+  \begin{align*}
+    \frac{p^2}{q^2} = \frac{p^3}{q^3} + \frac{(p - q)^2}{q^2} &\iff p^3 + q^3 = 2pq^2 \\
+                                                              &\iff \frac{p^3 + pp^2 q - 2pq^2 + q^3}{q^3} = \frac{p^2}{q^2}
+  \end{align*}
+  These being reduces fractions means that necessarily $q^3$ is a square,
+  thus $y = m/e^2$ for some $m, e \in \mathbb{Z}$.
+  Giving us
+  \begin{align*}
+    m^2 &= \frac{p^6}{q^2} + \frac{2p^5}{q} - 3 p^4 - 2p^3q + 6p^2 q^2 - 4 pq^3 + q^{4}
+  \end{align*}
+  So under $\alpha$ we have
+  \begin{align*}
+    (p/e^2, m/e^3) &\mapsto p/e^2 + m/e^3 - 1 \mod \mathbb{Q}^{\times 3} \\
+                   &\equiv (pe + m - e^3)/e^3 \mod \mathbb{Q}^{\times 3} \\
+                   &\equiv m + pe - e^3 \mod \mathbb{Q}^{\times 3}
+  \end{align*}
+  so we can factor
+  \begin{align*}
+    (-x^2 , y^2) &\mapsto -x^2 + y^2 - 1 \mod \mathbb{Q}^{\times 3} \\
+                 &\equiv (y + x - 1)(y - (x - 1)) \mod \mathbb{Q}^{\times 3} \\
+                 &\equiv (m + te - e^3)(m - te + e^3) \mod \mathbb{Q}^{\times 3}
+  \end{align*}
+
+
+\end{example}

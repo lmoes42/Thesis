@@ -1,0 +1,56 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bruce(1993)]{bruceLLTest}
+J.~Bruce.
+\newblock A really trivial proof of the lucas-lehmer test.
+\newblock \emph{The American Mathematical Monthly}, 1993.
+\newblock \doi{10.2307/2324959}.
+
+\bibitem[Dummit(2003)]{dummiteAndFooteAbstractAlgebra}
+D.~S. Dummit.
+\newblock \emph{Abstract Algebra}.
+\newblock Wiley, 2003.
+\newblock ISBN 9780471433347.
+
+\bibitem[Lang(2002)]{sergeLangAlgebra}
+S.~Lang.
+\newblock \emph{Algebra}.
+\newblock Springer, 2002.
+\newblock ISBN 9780387953854.
+
+\bibitem[Silverman(1986)]{silvermanArithmetic}
+J.~Silverman.
+\newblock \emph{The Arithmetic of Elliptic Curves}.
+\newblock Applications of Mathematics. Springer, 1986.
+\newblock ISBN 9780387962030.
+
+\bibitem[Silverman and Tate(2015)]{silvermanRationalPoints}
+J.~Silverman and J.~Tate.
+\newblock \emph{Rational Points on Elliptic Curves}.
+\newblock Springer, 01 2015.
+\newblock ISBN 978-3-319-18587-3.
+\newblock \doi{10.1007/978-3-319-18588-0}.
+
+\bibitem[Sutherland(2009)]{sutherlandMTS}
+W.~A. Sutherland.
+\newblock \emph{Introduction to Metric and Topological Spaces}.
+\newblock Oxford University Press, 2009.
+\newblock ISBN 9780199563081.
+
+\bibitem[van Beek(2010)]{moniqueThesis}
+M.~van Beek.
+\newblock On elliptic curves of the form $y^2 = x^3 + a(x - b)^2$.
+\newblock Thesis at University of Groningen, 2010.
+
+\bibitem[Washington(2003)]{washingtonElliptic}
+L.~C. Washington.
+\newblock \emph{Elliptic Curves: Number Theory and Cryptography}.
+\newblock Chapman and Hall, 2003.
+\newblock ISBN 9781420071467.
+
+\end{thebibliography}

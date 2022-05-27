@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1650715219 "cubicPolynomials.tex" "cubicPolynomials.pdf" "cubicPolynomials" 1650715219
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1625582867 2724734 30e2da15952a6244c3b0e464c3e1c35b ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "cubicPolynomials.aux" 1650715219 8 a94a2480d3289e625eea47cd1b285758 ""
+  "cubicPolynomials.tex" 1650715213 365 8504f6c0b7f85c0e29d67a994327a59e ""
+  (generated)
+  "cubicPolynomials.log"
+  "cubicPolynomials.pdf"

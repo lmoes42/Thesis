@@ -1,0 +1,115 @@
+Throughout this section it shall be well understood that
+we are talking about an Elliptic Curve $C: y^2 = f(x)$
+over $\mathbb{Q}$ such that $C(\mathbb{Q})$ has a point of order 3.
+We shall moreover be using shorthand
+\begin{equation*}
+  \Gamma := C(\mathbb{Q})
+\end{equation*}
+This section shall be dedicated to proving the final part of
+theorem \ref{thm:3descent}, that is
+\begin{theorem} \label{thm:finiteIndex}
+  The index $[\Gamma: 3\Gamma]$ is finite.
+\end{theorem}
+The sketch of our proof will be to define two classes
+of curves $E: y^2 = g(\xi)$ and $\bar{E}: y^2 = h(x)$
+and define two isogenies $\phi: E(\mathbb{Q}) \to \bar{E}(\mathbb{Q})$
+along with $\bar{\phi}: \bar{E}(\mathbb{Q}) \to E(\mathbb{Q})$
+such that $\phi \circ \varphi = P \mapsto 3P$.
+This gives us an exact sequence
+\begin{equation*}
+\begin{tikzcd}
+  0 \ar[r] & \bar{\phi}\bar{E}/3E \ar[r] & E/3E \ar[r] & E/\bar{\phi}\bar{E} \ar[r] & 0
+\end{tikzcd}
+\end{equation*}
+We find an isomorphism
+$f: \bar{\phi}\bar{E}/3E \to \mathbb{Q}(\sqrt{-3})^\times/(\mathbb{Q}(\sqrt{-3})^\times)^3 =: \mathbb{Q}(\sqrt{-3})_3 $
+and a homomorphism $g: E(\mathbb{Q}) \to \mathbb{Q}^\times/(\mathbb{Q}^\times)^3 =: \mathbb{Q}_{3}$ with kernel
+$\bar{\phi}\bar{E}(\mathbb{Q})$ and show their images are finite.
+Which means $E/3E$ must be finite as well.
+Lastly we show that it is sufficient
+to show any such $3E(\mathbb{Q})$ has
+finite index to show theorem \ref{thm:finiteIndex}, where we recall
+from theorem \ref{thm:isogenousOrder3} that there are only two
+possible forms our equation can have.
+
+\subsection{The Rationals Modulo the 3rd Powers}%
+\label{sub:the_rationals_modulo_the_3rd_powers}
+A group which we will need to discuss is $\mathbb{Q}_3 := \mathbb{Q}^{\times}/\mathbb{Q}^{\times 3}$.
+We can write a typical element of $x \in \mathbb{Q}^{\times}$
+as
+\[ x = \prod_{i=1}^{\infty} p_i^{d_i} \]
+where $p_i$ is the $i$the prime, $d_i \in \mathbb{Z}$ and only finitely
+many $d_i$ are nonzero.
+Setting $e_i$ as a basis for the infinite product of $\mathbb{Z}/3\mathbb{Z}$
+with itself.
+Then the following sequence is exact
+\begin{equation*}
+\begin{tikzcd}
+  & & p_i^{d_i} \ar[r, mapsto, "f"] & e_i d_i \\
+  0 \ar[r] & \mathbb{Q}^{\times 3} \ar[r, "\iota"] &\mathbb{Q}^{\times} \ar[r, "f"] & \bigoplus_{\mathbb{N}} (\mathbb{Z}/3\mathbb{Z}) \ar[r] & 0.
+\end{tikzcd}
+\end{equation*}
+So from the first isomorphism theorem it follows
+\begin{align*}
+  \mathbb{Q}_{3} = \mathbb{Q}^{\times} / \mathbb{Q}^{\times 3} \simeq \bigoplus_{\mathbb{N}} \mathbb{Z}/3\mathbb{Z}.
+\end{align*}
+So without loss of generality, we can assume $x$ is an integer times a
+coset, otherwise we just add $3$ to the multiplicity of
+$p^{-d}$ until we have a positive multiplicity. Moreover,
+since $-1$ is a cube we can assume $x$ can be represented as a positive
+integer.
+
+\subsection{Finite Image}%
+\label{sub:finite_image}
+We define an elliptic curve
+\begin{align*}
+  E: y^2 = x^3 + a^2(x - b)^2
+\end{align*}
+Define a map
+\begin{equation*}
+\begin{tikzcd}
+  E(\mathbb{Q}) \ar[r, mapsto, "\alpha"] & \mathbb{Q}_3 \\
+  (x, y) \ar[r, "\alpha"] & (y + a(x - b)) \mathbb{Q}^{\times 3}.
+\end{tikzcd}
+\end{equation*}
+Note that $\ker \alpha = E(\mathbb{Q})[3]$.
+From the same computation as in example \ref{ex:explicitComputation}
+we can write a rational point as $(m/e^2, n/e^3)$ and
+similarly to \cite[Section 4.1]{moniqueThesis}
+\begin{align*}
+  n^2 &= m^3 + a^2 m^2 e^2 - 2a^2 b e^{4} + a^2 b^2 e^{6} \\
+  \therefore m^3 &= (n + ame - abe^3)(n - ame + abe^3).
+\end{align*}
+so our image under $\alpha$ is given as
+\begin{align*}
+  \alpha(m/e^2, n/e^2) = (n + ame - abe^3)\mathbb{Q}^{\times 3}
+\end{align*}
+Note that if $n + ame - abe^3$ and $n - ame + abe^3$
+are coprime then this point must be a perfect cube and it is
+contained in $\ker \alpha$.
+
+Now assume these images do have prime factors in common.
+write this as $n + ame - abe^3 = dp$ where $p$ is coprime to $n - ame + abe^3$
+and $d = \gcd(n + ame - abe^3, n - ame + abe^3)$.
+Now we can follow \cite[Section 4.1]{moniqueThesis}.
+\begin{theorem} \label{thm:primeFactors}
+  There is a finite set of primes depending only on $a$ and $b$
+  such that for any point on the curve the constant $d$ has prime factors
+  only from this set.
+\end{theorem}
+\begin{proof}
+  By a standard application of the euclidean algorithm we find
+  \begin{align*}
+    d &= \gcd(n + ame - abe^3, n - (ame - abe^3)) \\
+      &= \gcd(n + ame - abe^3, -2 ame + 2abe^3) \\
+      &= \gcd(n + ae(m - be^2), -2ae(m - be^2))
+  \end{align*}
+  recall that $\gcd(n, e) = 1$. Since we only wish to
+  show finitely many prime factors exist we can ignore $-2a$ and simply add
+  these factors to our finite set, so we take
+  \begin{align*}
+    d' := \gcd(n + ae(m - be^2), m - be^2)
+  \end{align*}
+  and show it has a finite number of
+  prime factors
+\end{proof}

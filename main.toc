@@ -1,0 +1,24 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Cubic Polynomials}{2}{section.2}%
+\contentsline {section}{\numberline {3}Projective Geometry}{3}{section.3}%
+\contentsline {section}{\numberline {4}Elliptic Curves}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Elliptic Curves over the Rationals}{5}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Group law}{6}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Elliptic Curves over an Arbitrary Field}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Isogenies}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Points of Finite Order}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The Nagell-Lutz Theorem}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Points of Order 2}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Points of Order 3}{11}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Examples of Curves with a Point of Order 3}{13}{subsubsection.5.3.1}%
+\contentsline {section}{\numberline {6}Mordell's Theorem}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Explicit Computation of Mordell-Weil Groups}{15}{subsection.6.1}%
+\contentsline {section}{\numberline {7}The 3-Descent Theorem}{17}{section.7}%
+\contentsline {section}{\numberline {8}Finding a Height Function}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Bound on Height}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Height of 3P}{20}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Points of Bounded Height}{20}{subsection.8.3}%
+\contentsline {section}{\numberline {9}The Quotient Group is Finite}{21}{section.9}%
+\contentsline {subsection}{\numberline {9.1}The Rationals Modulo the 3rd Powers}{21}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Finite Image}{21}{subsection.9.2}%

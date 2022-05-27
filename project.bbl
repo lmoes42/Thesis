@@ -1,0 +1,33 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Lang(2002)]{sergeLangAlgebra}
+S.~Lang.
+\newblock \emph{Algebra}.
+\newblock Springer, 2002.
+\newblock ISBN 9780387953854.
+
+\bibitem[Silverman(1986)]{silvermanArithmetic}
+J.~Silverman.
+\newblock \emph{The Arithmetic of Elliptic Curves}.
+\newblock Applications of Mathematics. Springer, 1986.
+\newblock ISBN 9780387962030.
+
+\bibitem[Silverman and Tate(2015)]{silvermanRationalPoints}
+J.~Silverman and J.~Tate.
+\newblock \emph{Rational Points on Elliptic Curves}.
+\newblock Springer, 01 2015.
+\newblock ISBN 978-3-319-18587-3.
+\newblock \doi{10.1007/978-3-319-18588-0}.
+
+\bibitem[Washington(2003)]{washingtonElliptic}
+L.~C. Washington.
+\newblock \emph{Elliptic Curves: Number Theory and Cryptography}.
+\newblock Chapman and Hall, 2003.
+\newblock ISBN 9781420071467.
+
+\end{thebibliography}

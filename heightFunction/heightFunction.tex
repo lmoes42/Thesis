@@ -1,0 +1,124 @@
+The remainder of this project will be about finding a height function
+suitable for $E(\mathbb{Q})$, and then proving each of the properties
+in theorem \ref{thm:3descent}.
+
+We will first discuss a few examples so as to motivate an intuition behind
+a height function.
+\begin{example}
+  In the case that $A = \mathbb{Q}$ we can define a function
+  $h_{\mathbb{Q}}: \mathbb{Q} \to \mathbb{R}$
+  \begin{equation} \label{eq:rationalHeight}
+    h_{\mathbb{Q}}: p/q \mapsto \max \left\{ |p|, |q| \right\}
+  \end{equation}
+  and while it is known $\mathbb{Q}$ is not finitely generated
+  as a group, we can still prove one of the properties from the
+  3-descent theorem holds.
+  Namely, we know that for fixed $m \in \mathbb{R}$ there
+  are only finitely many rational numbers with height bounded
+  by $m$. If $h(p/q) \leq m$ then both $p, q \leq m$,
+  for which there are only finitely many possibilities.
+\end{example}
+\begin{definition} \label{def:ellipticHeight}
+  (heights on Elliptic Curves)
+  If $E: y^2 = f(x)$ is an Elliptic Curve over $\mathbb{Q}$, then
+  we define the height of a point $P = (x,y)$ as
+  $h(P) = \ln h_{\mathbb{Q}}(x)$, where $h_{\mathbb{Q}}$ is
+  as in equation \ref{eq:rationalHeight}.
+\end{definition}
+The remainder of this section shall be dedicated to proving
+this notion of height satisfies theorem \ref{thm:3descent}.
+
+\subsection{Bound on Height}%
+\label{sub:bound_on_height}
+Here we prove the first property of the 3-descent theorem, namely
+\begin{lemma} \label{lem:boundHeight}
+  Let $E: y^2 = f(x)$ be an Elliptic Curve.
+  Then if $P \in E(\mathbb{Q})$ then for
+  every $Q \in E(\mathbb{Q})$ there
+  is an integer $C_1$ such that
+  \begin{equation} \label{eq:boundOnHeightOfCurve}
+    h(P + Q) \leq 2 h(P) + C_1.
+  \end{equation}
+\end{lemma}
+This is found in \cite[section 3.2]{silvermanRationalPoints}.
+\begin{proof}
+  If $Q = \mathcal{O}$ then this
+  is trivial.
+  Suppose $Q \neq \mathcal{O}$,
+  we prove that for all $P$ except
+  for $ P \in \left\{ -Q, Q, \mathcal{O} \right\}$ there is
+  $\tilde{C}_1$ such that \ref{eq:boundOnHeightOfCurve} holds.
+  Then set $C_1 = \max\{h(-Q), h(Q), h(\mathcal{O}), \tilde{C}_1\}$.
+  This allows us to assume the $x$ coordinates of the points
+  are different.
+
+  So write $P = (x,y)$ and $Q = (x_0, y_0)$.
+  So set $P + Q = (\xi, \eta)$.
+  From how we defined the group law
+  on elliptic curve \ref{def:groupLaw} we find
+  \begin{align*}
+    \xi = \frac{(y - y_0)^2 - (x - x_0)^2(x + x_0 + a)}{(x - x_0)^2}
+  \end{align*}
+  where this is the same $a$ as in the definition of an elliptic curve $y^2 = x^3 + ax^2 + \cdots$.
+  Using the relation of the curve we find
+  there are rational numbers $A, \dots, G$ such that
+  \begin{align*}
+    \xi = \frac{Ay + Bx^2 + Cx + D}{Ex^2 + Fx + G}
+  \end{align*}
+  Without loss of generality, these are all integers, else
+  we just multiply with their least common multiple.
+  So note that when we fix $P$ there is no dependence on the
+  coordinates of $Q$ anymore. So this shall serve for
+  our constant $C_1$.
+
+  Using the substitution $x = m/e^2, y = n/e^3$
+  we simplify
+  \begin{align*}
+    \xi = \frac{Ane + Bm^2 + CM^2 + De^4}{Em^2 + Fme^2 + Ge^4}
+  \end{align*}
+  so indeed
+  \begin{align*}
+    \exp h_{\mathbb{Q}}(\xi) \leq \max \left\{ |Ane + Bm^2 + Cme^2 + De^4|, |Em^2 + Fme^2 + Ge^4| \right\}
+  \end{align*}
+  Applying the triangle inequality tells us
+  \begin{align*}
+    \exp h(P + Q) = H(\xi) \leq \max \left\{ |AK| + |B| + |C| + |D|, |E| + |F| + |G| \right\} \exp h(Q)^2
+  \end{align*}
+  taking the log of both sides yields the desired result.
+\end{proof}
+
+\subsection{Height of 3P}%
+\label{sub:height_of_3p}
+Now that we have proven the first property, we arrive at the second.
+\begin{lemma} \label{lem:height3p}
+  There is a constant $C_1$ such that
+  \begin{align*}
+    h(3P) \geq 9h(P) - C_2
+  \end{align*}
+\end{lemma}
+It can be shown \cite[Appendix B]{moniqueThesis} that
+this is just a specific case of
+a lemma in Silverman's Book \cite[Lemma 3.6]{silvermanRationalPoints}.
+Proving either this lemma or the equivalence is outside the scope of this thesis.
+
+\subsection{Points of Bounded Height}%
+\label{sub:points_of_bounded_height}
+Now for the 3rd property.
+\begin{lemma} \label{lem:pointsOfBoundedHeight}
+  For every constant $C_3$ the set
+  \begin{align*}
+    \left\{ Q \in A : h(Q) \leq C_3 \right\}
+  \end{align*}
+  is finite.
+\end{lemma}
+Note that this exact same reasoning also works over $\mathbb{Q}$.
+\begin{proof}
+  Recall
+  \begin{align*}
+    h(p/q, y) = \ln \max \left\{ |p|, |q| \right\}
+  \end{align*}
+  so for any $C_1$ there are only
+  finitely many options for $p$ and $q$.
+\end{proof}
+The final property is significantly harder to prove and we will dedicate
+an entire chapter to it.

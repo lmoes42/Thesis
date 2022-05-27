@@ -1,0 +1,135 @@
+\newcommand{\thecourse}{Bachelor Project}
+\newcommand{\theassignment}{Outline}
+
+\documentclass[11pt, oneside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}          %include graphics
+\usepackage{float}             %better handling of tables, etc.
+
+
+%mathematics
+\usepackage{amssymb,amsmath, amsfonts, amsthm}
+\usepackage{mathtools}
+\usepackage{extarrows}
+\usepackage[intlimits]{esint}
+
+%setup for amsthm
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+
+
+%minor improvements to typesetting
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\microtypecontext{spacing=nonfrench}
+\microtypesetup{protrusion=true}
+
+%adjust margins and headers
+\usepackage{geometry,fancyhdr}
+\geometry{a4paper,headheight=20pt, footskip=20pt, textheight=684pt, marginparwidth=10pt, textwidth=476pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\thecourse: \theassignment}
+\rhead{Levi Moes S4145135}
+
+\title{\thecourse \theassignment}
+\author{Levi Moes}
+
+%commands
+\DeclareMathOperator{\spa}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\lcm}{lcm}
+
+\begin{document}
+\section{Outline}
+\label{sec:outline}
+Silverman proves
+a version of mordell's theorem for curves having a point of order
+two.
+The goal of this project will be the following.
+\begin{theorem} \label{thm:goal}
+  Let
+  \[ E: y^2 = x^3 + ax^2 + bx + c \]
+  be an elliptic curve containing a point of order 3,
+  then $E(\mathbb{Q})$ is finitely generated.
+\end{theorem}
+Potentially we even get the following for free.
+\begin{corollary} \label{cor:goalExtra}
+  Let
+  \[ E: y^2 = x^3 + ax^2 + bx + c \]
+  be an elliptic curve containing a point of order 3,
+  then $E(\mathbb{Q}(\sqrt{-3}))$ is finitely generated.
+\end{corollary}
+Our strategy will be to broadly follow Silverman's proof,
+namely we will use a specific case of the Descent Theorem
+from namely:
+\begin{theorem} \label{thm:descentDraft}
+  Let $A$ be an abelian group. Suppose
+  that there exists a function $h: A \to \mathbb{R}$
+  with the following properties.
+  \begin{enumerate}
+    \item Let $Q \in A$. There exists $C_1(A, Q)$, such that
+      for all $P, Q \in A$
+      \[ h(P + Q) \leq 2h(P) + C_1(A, Q). \]
+    \item There is $C_2(A)$, such that
+      for all $P \in A$
+      \[ h(3P) \geq 9 h(P) - C_2(A). \]
+    \item For every $C_3 \in \mathbb{R}$ the set
+      \[ \left\{ P \in A : h(P) \leq C_3 \right\}  \]
+      is finite.
+  \end{enumerate}
+  If furthermore $A/3A$ is finite
+  then $A$ is finitely generated.
+\end{theorem}
+We shall prove this theorem and then prove all its
+hypotheses in order of increasing difficulty.
+Firstly, we shall define such a function $H: \mathbb{Q} \to \mathbb{R}$.
+And then generalise it to elliptic curves.
+\begin{definition} \label{def:heightFunctionRationals}
+  Let $x = p/q \in \mathbb{Q}$ with $\gcd(p,q) = 1$.
+  Then we define the height of $x$ as $H(x) = \max \left\{ |p|, |q| \right\}$.
+\end{definition}
+And now for Elliptic Curves. We shall understand $E$ to
+be an Elliptic Curve.
+\begin{definition} \label{def:heightFunctionEllipticCurves}
+  Define the height of a rational point $P = (x,y)$ on $E$
+  as $H(P) := H(x)$.
+\end{definition}
+\noindent Now the lemmas.
+\begin{lemma} \label{lem:property1}
+  For all constants $m \in \mathbb{R}$ we have that the set
+  \[ \left\{ P \in E(\mathbb{Q}) : H(P) \leq m \right\} \]
+  is finite.
+\end{lemma}
+\noindent This is a result which holds more generally and its
+proof is straightforward.
+\begin{lemma} \label{lem:property2}
+  Let $P_0 \in E(\mathbb{Q})$, then there exists $b \in \mathbb{R}$ such that
+  for every $P \in E(\mathbb{Q})$
+  \[ h(P + P_0) \leq 2h(P) + b. \]
+\end{lemma}
+\noindent Which also holds more generally. The next result
+significantly deviates from Silverman's.
+\begin{lemma} \label{lem:property3}
+  There is $k \in \mathbb{R}$ such that for every point $P \in E(\mathbb{Q})$
+  we have
+  \[ H(3P) \geq 9H(P) - k. \]
+\end{lemma}
+\noindent Which is harder to prove. And lastly:
+\begin{lemma} \label{lem:property4}
+  Suppose $E(\mathbb{Q})$ has a point of order 3.
+  Then the subgroup $3E(\mathbb{Q})$ has finite index.
+\end{lemma}
+\end{document}

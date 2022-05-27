@@ -1,0 +1,12 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Elliptic Curves}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Elliptic Curves over the Rationals}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}The Group law}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Projective Geometry and the Identity}{2}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Elliptic Curves over an Arbitrary Field}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Points of Finite Order}{2}{section.3}%
+\contentsline {section}{\numberline {4}Mordell's Theorem}{2}{section.4}%
+\contentsline {section}{\numberline {5}The 3-Descent Theorem}{2}{section.5}%
+\contentsline {section}{\numberline {6}Finding a Height Function}{2}{section.6}%
+\contentsline {section}{\numberline {7}References}{2}{section.7}%
