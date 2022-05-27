@@ -1,0 +1,31 @@
+Throughout this section it shall be well understood that
+we are talking about an Elliptic Curve $C: y^2 = f(x)$
+over $\mathbb{Q}$ such that $C(\mathbb{Q})$ has a point of order 3.
+We shall moreover be using shorthand
+\begin{equation*}
+  \Gamma := C(\mathbb{Q})
+\end{equation*}
+This section shall be dedicated to proving the final part of
+theorem \ref{thm:3descent}, that is
+\begin{theorem} \label{thm:finiteIndex}
+  The index $[\Gamma: 3\Gamma]$ is finite.
+\end{theorem}
+The sketch of our proof will be to define two classes
+of curves $E: y^2 = g(\xi)$ and $\bar{E}: y^2 = h(x)$
+and define two isogenies $\phi: E(\mathbb{Q}) \to \bar{E}(\mathbb{Q})$
+along with $\bar{\phi}: \bar{E}(\mathbb{Q}) \to E(\mathbb{Q})$
+such that $\phi \circ \varphi = P \mapsto 3P$.
+This gives us an exact sequence
+\begin{equation*}
+\begin{tikzcd}
+  0 \ar[r] & \bar{\phi}\bar{E}/3E \ar[r] & E/3E \ar[r] & E/\bar{\phi}\bar{E} \ar[r] & 0
+\end{tikzcd}
+\end{equation*}
+We find an isomorphism
+$f: \bar{\phi}\bar{E}/3E \to \mathbb{Q}(\sqrt{-3})^\times/(\mathbb{Q}(\sqrt{-3})^\times)^3$
+and a homomorphism $g: E(\mathbb{Q}) \to \mathbb{Q}^\times/(\mathbb{Q}^\times)^3$ with kernel
+$\bar{\phi}\bar{E}(\mathbb{Q})$ and show their images are finite.
+Which means $E/3E$ must be finite as well.
+Lastly we show that it is sufficient
+to show any such $3E(\mathbb{Q})$ has
+finite index to show theorem \ref{thm:finiteIndex}.

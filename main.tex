@@ -1,0 +1,123 @@
+\documentclass[11pt, oneside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphics}          %include graphics
+\usepackage{float}             %better handling of tables, etc.
+
+\usepackage{pythonhighlight}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+
+%mathematics
+\usepackage{amssymb,amsmath, amsfonts, amsthm}
+\usepackage{mathtools}
+\usepackage{extarrows}
+
+%setup for amsthm
+\usepackage[intlimits]{esint}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{counterexample}[theorem]{Counterexample}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+
+\usepackage{hyperref}
+\usepackage[square, numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+
+%minor improvements to typesetting
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\microtypecontext{spacing=nonfrench}
+\microtypesetup{protrusion=true}
+
+%adjust margins and headers
+\usepackage{geometry,fancyhdr}
+\geometry{a4paper,headheight=20pt, footskip=20pt, textheight=684pt, marginparwidth=10pt, textwidth=476pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Bachelor Thesis}
+\rhead{Levi Moes}
+\rfoot{\thepage}
+\title{Bachelor Project \\
+  Mordell's Theorem for Elliptic Curves with a point of Order 3}
+\author{Levi Moes}
+
+%commands
+\newcommand{\legendre}[2]{\left( \frac{#1}{#2} \right)}
+\newcommand{\emptyline}{\\ \hphantom{ } \\}
+\DeclareMathOperator{\spa}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\tors}{tors}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  \noindent
+  Tate-Silverman proves Mordell's theorem for curves with a point of order 2,
+  we show this proof generalises to curves with a point of order 3.
+\end{abstract}
+\tableofcontents
+
+\section{Introduction}
+\label{sec:introduction}
+\input{introduction/introduction.tex}
+
+\clearpage
+\section{Cubic Polynomials}%
+\label{sec:cubic_polynomials}
+\input{cubicPolynomials/cubicPolynomials.tex}
+
+\clearpage
+\section{Projective Geometry}%
+\label{sec:projective_geometry}
+
+\clearpage
+\section{Elliptic Curves}%
+\label{sec:elliptic_curves}
+\input{ellipticCurves/ellipticCurves.tex}
+
+\clearpage
+\section{Points of Finite Order}%
+\label{sec:points_of_finite_order}
+\input{pointsOfFiniteOrder/pointsOfFiniteOrder.tex}
+
+\clearpage
+\section{Mordell's Theorem}%
+\label{sec:mordell_s_theorem}
+\input{mordellTheorem/mordellTheorem.tex}
+
+\clearpage
+\section{The 3-Descent Theorem}%
+\label{sec:the_3_descent_theorem}
+\input{descent/descent.tex}
+
+\clearpage
+\section{Finding a Height Function}%
+\label{sec:finding_a_height_function}
+\input{heightFunction/heightFunction.tex}
+
+\clearpage
+\section{The Quotient Group is Finite}%
+\label{sec:the_quotient_group_is_finite}
+\input{quotientGroup/quotientGroup.tex}
+
+
+
+\clearpage
+\nocite{*}
+\bibliography{references}
+\end{document}

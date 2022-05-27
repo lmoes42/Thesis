@@ -1,0 +1,52 @@
+The remainder of this project will be about finding a height function
+suitable for $E(\mathbb{Q})$, and then proving each of the properties
+in theorem \ref{thm:3descent}.
+
+We will first discuss a few examples so as to motivate an intuition behind
+a height function.
+\begin{example}
+  In the case that $A = \mathbb{Q}$ we can define a function
+  $h_{\mathbb{Q}}: \mathbb{Q} \to \mathbb{R}$
+  \begin{equation} \label{eq:rationalHeight}
+    h_{\mathbb{Q}}: p/q \mapsto \max \left\{ |p|, |q| \right\}
+  \end{equation}
+  and while it is known $\mathbb{Q}$ is not finitely generated
+  as a group, we can still prove one of the properties from the
+  3-descent theorem holds.
+  Namely, we know that for fixed $m \in \mathbb{R}$ there
+  are only finitely many rational numbers with height bounded
+  by $m$. If $h(p/q) \leq m$ then both $p, q \leq m$,
+  for which there are only finitely many possibilities.
+\end{example}
+\begin{definition} \label{def:ellipticHeight}
+  (heights on Elliptic Curves)
+  If $E: y^2 = f(x)$ is an Elliptic Curve over $\mathbb{Q}$, then
+  we define the height of a point $P = (x,y)$ as
+  $h(P) = h_{\mathbb{Q}}(x)$, where $h_{\mathbb{Q}}$ is
+  as in equation \ref{eq:rationalHeight}.
+\end{definition}
+The remainder of this section shall be dedicated to proving
+this notion of height satisfies theorem \ref{thm:3descent}.
+
+\subsection{Bound on Height}%
+\label{sub:bound_on_height}
+Here we prove the first property of the 3-descent theorem, namely
+\begin{lemma}
+  Let $E: y^2 = f(x)$ be an Elliptic Curve.
+  Then if $P \in E(\mathbb{Q})$ then for
+  every $Q \in E(\mathbb{Q})$ there
+  is an integer $C_1$ such that
+  \begin{equation} \label{eq:boundOnHeightOfCurve}
+    h(P + Q) \leq 2 h(P) + C_1.
+  \end{equation}
+\end{lemma}
+This is found in \cite[section 3.2]{silvermanRationalPoints}.
+\begin{proof}
+  If $Q = \mathcal{O}$ then this
+  is trivial.
+  Suppose $Q \neq \mathcal{O}$,
+  we prove that for all $P$ except
+  for $ P \in \left\{ -Q, Q, \mathcal{O} \right\}$ there is
+  $\tilde{C}_1$ such that \ref{eq:boundOnHeightOfCurve} holds.
+  Then set $C_1 = \max\{h(-Q), h(Q), h(\mathcal{O}), \tilde{C}_1\}$.
+\end{proof}
